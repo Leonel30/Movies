@@ -32,15 +32,15 @@ const handleSubmit = () => {
 
       <form onSubmit={handleSubmit}>
       <div className="mb-3">
-        <labe htmlFor="title" className="form-label">Titulo</labe>
+        <label htmlFor="title" className="form-label">Titulo</label>
         <input name="title" onChange={handleChange} type = "text" id="title"className="form-control"></input>
       </div>
       <div className="mb-3">
-        <labe htmlFor="description" className="form-label">Description</labe>
+        <label htmlFor="description" className="form-label">Description</label>
         <input name="description" onChange={handleChange} type = "text" id="title"className="form-control"></input>
       </div>
       <div className="mb-3">
-        <labe htmlFor="duration" className="form-label">Duration</labe>
+        <label htmlFor="duration" className="form-label">Duration</label>
         <input name="duration" onChange={handleChange} type = "number" id="duration"className="form-control"></input>
       </div>
       <button className="btn btn-primary">Submit</button>

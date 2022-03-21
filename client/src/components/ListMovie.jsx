@@ -15,12 +15,20 @@ function ListMovie({ movies }) {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{movies.Title}</td>
-            <td>{movies.Title}</td>
-            <td>{movies.description}</td>
-            <td>{movies.length}</td>
-          </tr>
+          {
+            movies.map((movie,i)=> {
+              return  <tr key= {i}>
+                      <td>{movie.id}</td>
+                      <td>{movie.titulo}</td>
+                      <td>{movie.descripcion}</td>
+                      <td>{movie.duracion}</td>
+                      </tr>
+            })
+          }
+
+          
+
+         
         </tbody>
       </table>
     </React.Fragment>

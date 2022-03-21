@@ -1,0 +1,49 @@
+/* const searchPokemon = async (pokemon) =>{
+    try{
+        let apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto';
+        const responce =  await fetch(apiUrl)
+        const data = await responce.json()
+        console.log(data)
+        return data
+    }
+    catch(e){
+
+    }
+    
+};
+searchPokemon() */
+
+
+
+
+   /* fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+    .then( response => response.json())
+    .then(data => setMovies(data))
+  
+    .catch(console.error("fucking error "))  */
+/* }
+    ,[]) */
+
+   console.log(movies)
+
+  /* for newMovie */
+/* const [newMovie, setNewMovie] = useState({
+  title:"",
+  description:"",
+  duration:0
+}) */
+
+
+const searchPokemon = async (pokemon) =>{
+  try{
+      let apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto';
+      const responce =  await fetch(apiUrl)
+      const data = await responce.json()
+      console.log(data)
+      return data
+  }
+  catch(e){
+
+  }
+  
+};
