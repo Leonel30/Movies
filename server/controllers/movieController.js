@@ -42,6 +42,23 @@ let movieController = {
            
         }) 
 },
+listasCate:  (req, res)=> {
+      
+    db.Categories.findAll()
+    .then(category => {
+
+        let respuesta = {
+            meta : {
+                status : 200,
+                total: category.length,
+                url: 'api/movie/list/category'
+            },
+            data : category
+        }
+        res.json(respuesta);
+           
+        }) 
+},
    show :  (req, res)=> {
       
     db.Movies.findByPk(req.params.id)
