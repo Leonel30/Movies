@@ -6,6 +6,9 @@ import {useState,useEffect} from 'react'
 
 
 function App() {
+ 
+const [listUpdate, setListUpdate] = useState(false);
+
 
 const [movies, setMovies] = useState([])
 const [category, setCategory] = useState([])
@@ -20,12 +23,14 @@ const [newMovie, setNewMovie] = useState({
 })
 
 useEffect(()=>{
+
     fetch('/api/movie/list')
     .then(response => response.json())
     .then( movie => setMovies(movie.data))
     .catch(e => console.error(e))
-    
-},[]);
+    setListUpdate(false)
+
+},[listUpdate]);
 
 useEffect(()=>{
   fetch('/api/movie/list/category')
@@ -43,7 +48,7 @@ console.log(movies)
             <section className='row'>
               <article className='col-7'>
                 <h2>Listado de Peliculas</h2>
-                <ListMovie movies = {movies} />
+                <ListMovie movies = {movies} setListUpdate = {setListUpdate} />
               </article>
                <article className='col-7'>
                 <h2>Agregar Nueva Pelicula</h2>

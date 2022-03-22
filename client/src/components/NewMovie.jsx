@@ -14,7 +14,7 @@ let {titulo, descripcion, duracion,trailer,fecha_estreno,category_id} = newMovie
 
 
 const handleSubmit = (e) => {
-  e.preventDefault();
+ /*  e.preventDefault(); */
 
 
   duracion = parseInt(duracion,10)
@@ -56,19 +56,19 @@ const handleSubmit = (e) => {
       </div>
       <div className="mb-3">
         <label htmlFor="description" className="form-label">Descripcion</label>
-        <input onChange={handleChange} name="descripcion"  type = "text" id="title"className="form-control"></input>
+        <input value= {descripcion} onChange={handleChange} name="descripcion"  type = "text" id="title"className="form-control"></input>
       </div>
       <div className="mb-3">
         <label htmlFor="duration" className="form-label">Duracion</label>
-        <input onChange={handleChange} name="duracion" type = "number" id="duration"className="form-control"></input>
+        <input value= {duracion}  onChange={handleChange} name="duracion" type = "number" id="duration"className="form-control"></input>
       </div>
       <div className="mb-3">
         <label htmlFor="trailer" className="form-label">Trailer</label>
-        <input onChange={handleChange} name="trailer" type = "url" id="trailer"className="form-control"></input>
+        <input value= {trailer}  onChange={handleChange} name="trailer" type = "url" id="trailer"className="form-control"></input>
       </div>
       <div className="mb-3">
         <label htmlFor="Categoria" className="form-label">Categoria</label>
-        <select onChange={handleChange} name="category_id" className = "form-select">
+        <select   onChange={handleChange} name="category_id" className = "form-select">
            {category.map((categories,i)=>{
              return <option key={i} value={categories.id}>{categories.name}</option>
            })}
@@ -78,7 +78,7 @@ const handleSubmit = (e) => {
       </div>
       <div className="mb-3">
         <label htmlFor="fecha_estreno" className="form-label">Fecha de Estreno</label>
-        <input onChange={handleChange} name="fecha_estreno" type ="date" id="fecha_estreno"className="form-control"></input>
+        <input value= {fecha_estreno}  onChange={handleChange} name="fecha_estreno" type ="date" id="fecha_estreno"className="form-control"></input>
       </div>
       <button className="btn btn-primary">Submit</button>
       </form>
